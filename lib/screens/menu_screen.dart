@@ -4,9 +4,7 @@ import 'home_screen.dart'; // News App feature (already exists)
 import 'screen_tugas_login.dart';
 import 'screen_tugas_maps.dart';
 import 'screen_game.dart';
-
-
-
+import 'package:flutter_news_app/screens/screen_stocks.dart';
 
 
 class MenuScreen extends StatelessWidget {
@@ -20,7 +18,7 @@ class MenuScreen extends StatelessWidget {
         'subtitle': 'Menampilkan berita dari NewsAPI',
         'icon': Icons.article_outlined,
         'page': const HomeScreen(),
-      },
+},
       {
   'title': '🧩 Tugas 1',
   'subtitle': 'Login & Register (mock)',
@@ -43,11 +41,12 @@ class MenuScreen extends StatelessWidget {
 },
 
       {
-        'title': '🧠 Tugas 4',
-        'subtitle': 'Percobaan keempat',
-        'icon': Icons.psychology_alt_outlined,
-        'page': const PlaceholderScreen(title: 'Tugas 4'),
-      },
+  'title': '📊 Crypto Watch',
+  'subtitle': 'Pantau harga real-time',
+  'icon': Icons.show_chart,
+  'page': const ScreenStocks(),
+},
+
       {
         'title': '🚀 Tugas 5',
         'subtitle': 'Percobaan kelima',

@@ -1,8 +1,8 @@
 name: flutter_news_app
-description: "A modern Flutter app with multi-feature menu: News, Login/Register, and Maps."
+description: "A modern Flutter app with multi-feature menu: News, Login/Register, Maps, and Crypto Watch."
 publish_to: 'none'
 
-version: 1.2.0+1
+version: 1.2.1+2
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   shimmer: ^3.0.0
   cached_network_image: ^3.3.1
+  fl_chart: ^0.65.0   # ← chart dengan grid, axis, tooltip
 
   # ─── Networking & API ────────────────────────
   http: ^1.5.0
@@ -30,8 +31,7 @@ dependencies:
   flutter_map: ^8.2.2
   latlong2: ^0.9.1
   geolocator: ^14.0.2
-
-  # HARUS ikut versi 8.x agar cocok dengan flutter_map 8.x
+  # cocok dengan flutter_map 8.x
   flutter_map_marker_cluster: ^8.1.0
 
 dev_dependencies:
