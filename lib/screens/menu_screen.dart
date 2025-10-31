@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart'; // News App feature (already exists)
 import 'screen_tugas_login.dart';
 import 'screen_tugas_maps.dart';
+import 'screen_game.dart';
+
 
 
 
@@ -34,11 +36,12 @@ class MenuScreen extends StatelessWidget {
 },
 
       {
-        'title': '🧮 Tugas 3',
-        'subtitle': 'Percobaan ketiga',
-        'icon': Icons.calculate_outlined,
-        'page': const PlaceholderScreen(title: 'Tugas 3'),
-      },
+  'title': '🧮 game ',
+  'subtitle': 'game sederhana',
+  'icon': Icons.calculate_outlined,
+  'page': const ScreenGame(),
+},
+
       {
         'title': '🧠 Tugas 4',
         'subtitle': 'Percobaan keempat',
