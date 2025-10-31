@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onSubmitted: _onSearchSubmitted,
                     textInputAction: TextInputAction.search,
                     decoration: InputDecoration(
-                      hintText: 'Cari berita (contoh: teknologi, sepakbola)...',
+                      hintText: 'Cari berita',
                       prefixIcon: const Icon(Icons.search),
                       suffixIcon: _searchController.text.isNotEmpty
                           ? IconButton(

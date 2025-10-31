@@ -1,5 +1,5 @@
 ﻿import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/menu_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,21 +7,18 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter News App',
+      title: 'Flutter Experimental Hub',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.indigo,
-        scaffoldBackgroundColor: Colors.grey[50],
-        appBarTheme: const AppBarTheme(
-          elevation: 2,
-          backgroundColor: Colors.indigo,
-          foregroundColor: Colors.white,
-        ),
+        scaffoldBackgroundColor: Colors.grey.shade100,
+        useMaterial3: true,
       ),
-      home: const HomeScreen(),
-      debugShowCheckedModeBanner: false,
+      home: const MenuScreen(),
     );
   }
 }

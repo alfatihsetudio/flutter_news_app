@@ -1,24 +1,43 @@
 name: flutter_news_app
-description: "A Flutter news app (student project)."
+description: "A modern Flutter app with multi-feature menu: News, Login/Register, and Maps."
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.2.0+1
 
 environment:
-  sdk: ">=2.18.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  # ─── UI & Base ───────────────────────────────
   cupertino_icons: ^1.0.8
-  http: ^0.13.6
-  cached_network_image: ^3.2.3
-  url_launcher: ^6.1.8
-  shimmer: ^2.0.0
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+
+  # ─── Networking & API ────────────────────────
+  http: ^1.5.0
+
+  # ─── Utilities ───────────────────────────────
+  intl: ^0.20.2
+  shared_preferences: ^2.3.2
+  flutter_tts: ^4.2.3
+  share_plus: ^12.0.1
+  url_launcher: ^6.3.0
+
+  # ─── Maps Feature ────────────────────────────
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+  geolocator: ^14.0.2
+
+  # HARUS ikut versi 8.x agar cocok dengan flutter_map 8.x
+  flutter_map_marker_cluster: ^8.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
