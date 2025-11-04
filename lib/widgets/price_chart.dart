@@ -34,8 +34,8 @@ class PriceChart extends StatelessWidget {
           drawVerticalLine: true,
           verticalInterval: (prices.length / 6).clamp(1, double.infinity),
           horizontalInterval: (spanY / 4),
-          getDrawingVerticalLine: (_) => FlLine(color: Colors.grey.withOpacity(0.25), strokeWidth: 0.6),
-          getDrawingHorizontalLine: (_) => FlLine(color: Colors.grey.withOpacity(0.25), strokeWidth: 0.6),
+          getDrawingVerticalLine: (_) => FlLine(color: Colors.grey.withValues(alpha: 0.25), strokeWidth: 0.6),
+          getDrawingHorizontalLine: (_) => FlLine(color: Colors.grey.withValues(alpha: 0.25), strokeWidth: 0.6),
         ),
 
         // TITLES (waktu di bawah, harga di kiri)
@@ -93,7 +93,7 @@ class PriceChart extends StatelessWidget {
             barWidth: 2.2,
             color: Colors.blue,
             dotData: const FlDotData(show: false),
-            belowBarData: BarAreaData(show: true, color: Colors.blue.withOpacity(0.18)),
+            belowBarData: BarAreaData(show: true, color: Colors.blue.withValues(alpha: 0.18)),
             spots: List.generate(
               prices.length,
               (i) => FlSpot(i.toDouble(), prices[i]),

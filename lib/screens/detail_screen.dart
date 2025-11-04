@@ -115,7 +115,7 @@ class _DetailScreenState extends State<DetailScreen> with SingleTickerProviderSt
     if (content == null || content.trim().isEmpty) return '';
     final words = content.split(RegExp(r'\s+')).length;
     final minutes = (words / 200).ceil();
-    return '~${minutes} min read';
+    return '~$minutes min read';
   }
 
   Future<void> _toggleTts() async {
@@ -181,7 +181,7 @@ class _DetailScreenState extends State<DetailScreen> with SingleTickerProviderSt
                 title: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.35),
+                    color: Colors.black.withValues(alpha: 0.35),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),

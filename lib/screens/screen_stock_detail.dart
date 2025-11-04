@@ -29,7 +29,7 @@ class ScreenStockDetail extends StatelessWidget {
       decimalDigits: 0,
     );
 
-    final prices = item.sparkline.map((e) => (e as num).toDouble()).toList();
+    final prices = item.sparkline.map((e) => (e).toDouble()).toList();
     final times = _buildTimesFor7d(prices.length);
 
     return Scaffold(

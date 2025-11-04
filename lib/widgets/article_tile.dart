@@ -127,7 +127,7 @@ class ArticleTile extends StatelessWidget {
                           article.description ?? '',
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(fontSize: 13, color: Colors.black87.withOpacity(0.9)),
+                          style: TextStyle(fontSize: 13, color: Colors.black87.withValues(alpha: 0.9)),
                         ),
 
                         const SizedBox(height: 8),

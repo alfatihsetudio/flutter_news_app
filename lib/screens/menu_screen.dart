@@ -111,10 +111,10 @@ class _MenuScreenState extends State<MenuScreen>
                         filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.08),
+                            color: Colors.white.withValues(alpha: 0.08),
                             borderRadius: BorderRadius.circular(24),
                             border: Border.all(
-                              color: Colors.white.withOpacity(0.18),
+                              color: Colors.white.withValues(alpha: 0.18),
                             ),
                             boxShadow: const [
                               BoxShadow(
@@ -262,19 +262,19 @@ class _FeatureCardState extends State<_FeatureCard> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: Colors.white.withOpacity(_hover ? 0.32 : 0.18),
+                    color: Colors.white.withValues(alpha: _hover ? 0.32 : 0.18),
                   ),
                   gradient: LinearGradient(
                     colors: [
-                      Colors.white.withOpacity(_hover ? 0.22 : 0.14),
-                      Colors.white.withOpacity(_hover ? 0.08 : 0.06),
+                      Colors.white.withValues(alpha: _hover ? 0.22 : 0.14),
+                      Colors.white.withValues(alpha: _hover ? 0.08 : 0.06),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(_hover ? 0.24 : 0.14),
+                      color: Colors.black.withValues(alpha: _hover ? 0.24 : 0.14),
                       blurRadius: _hover ? 26 : 16,
                       spreadRadius: -6,
                       offset: const Offset(0, 12),
@@ -301,7 +301,7 @@ class _FeatureCardState extends State<_FeatureCard> {
                       f.subtitle,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.85),
+                        color: Colors.white.withValues(alpha: 0.85),
                         fontSize: 12,
                       ),
                     ),
@@ -335,8 +335,8 @@ class _IconAura extends StatelessWidget {
         shape: BoxShape.circle,
         gradient: RadialGradient(
           colors: [
-            Colors.indigoAccent.withOpacity(active ? 0.75 : 0.55),
-            Colors.indigo.withOpacity(active ? 0.25 : 0.18),
+            Colors.indigoAccent.withValues(alpha: active ? 0.75 : 0.55),
+            Colors.indigo.withValues(alpha: active ? 0.25 : 0.18),
             Colors.transparent,
           ],
           stops: const [0.0, 0.55, 1.0],
@@ -369,9 +369,9 @@ class _GlassPill extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.12),
+            color: Colors.white.withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(999),
-            border: Border.all(color: Colors.white.withOpacity(0.26)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.26)),
           ),
           child: DefaultTextStyle.merge(
             style: const TextStyle(
@@ -399,10 +399,10 @@ class _AnimatedBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final colors = [
-      scheme.primary.withOpacity(0.75),
-      Colors.pinkAccent.withOpacity(0.65),
-      Colors.amber.withOpacity(0.55),
-      Colors.cyanAccent.withOpacity(0.55),
+      scheme.primary.withValues(alpha: 0.75),
+      Colors.pinkAccent.withValues(alpha: 0.65),
+      Colors.amber.withValues(alpha: 0.55),
+      Colors.cyanAccent.withValues(alpha: 0.55),
     ];
 
     return AnimatedBuilder(
@@ -433,8 +433,8 @@ class _AnimatedBackground extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.white.withOpacity(0.06),
-                      Colors.white.withOpacity(0.02),
+                      Colors.white.withValues(alpha: 0.06),
+                      Colors.white.withValues(alpha: 0.02),
                       Colors.transparent,
                     ],
                     begin: Alignment.topCenter,
@@ -473,15 +473,15 @@ class _Blob extends StatelessWidget {
           // glow lembut
           boxShadow: [
             BoxShadow(
-              color: color.withOpacity(0.35),
+              color: color.withValues(alpha: 0.35),
               blurRadius: 180,
               spreadRadius: 60,
             )
           ],
           gradient: RadialGradient(
             colors: [
-              color.withOpacity(0.55),
-              color.withOpacity(0.18),
+              color.withValues(alpha: 0.55),
+              color.withValues(alpha: 0.18),
               Colors.transparent,
             ],
             stops: const [0.0, 0.45, 1.0],

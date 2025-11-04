@@ -14,8 +14,8 @@ class PercentChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: ShapeDecoration(
-        color: color.withOpacity(0.10),
-        shape: StadiumBorder(side: BorderSide(color: color.withOpacity(0.25))),
+        color: color.withValues(alpha: 0.10),
+        shape: StadiumBorder(side: BorderSide(color: color.withValues(alpha: 0.25))),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

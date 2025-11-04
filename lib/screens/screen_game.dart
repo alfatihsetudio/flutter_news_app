@@ -348,14 +348,14 @@ class _ScreenGameState extends State<ScreenGame> {
                                     if (!_running)
                                       Positioned.fill(
                                         child: Container(
-                                          color: Colors.white.withOpacity(0.06),
+                                          color: Colors.white.withValues(alpha: 0.06),
                                           child: Center(
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Icon(Icons.swipe_rounded,
                                                     size: 48,
-                                                    color: theme.colorScheme.onSurface.withOpacity(0.8)),
+                                                    color: theme.colorScheme.onSurface.withValues(alpha: 0.8)),
                                                 const SizedBox(height: 8),
                                                 Text(
                                                   'Swipe / gunakan D-Pad untuk mengarahkan.\nTekan ▶ Start.',
@@ -423,13 +423,13 @@ class _StatPill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.65),
+        color: Colors.white.withValues(alpha: 0.65),
         borderRadius: BorderRadius.circular(14),
         boxShadow: [
           BoxShadow(
             blurRadius: 16,
             spreadRadius: 0,
-            color: Colors.black.withOpacity(0.06),
+            color: Colors.black.withValues(alpha: 0.06),
             offset: const Offset(0, 6),
           ),
         ],
@@ -469,7 +469,7 @@ class _FoodCell extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             blurRadius: 8,
-            color: const Color(0xFFFF5D6C).withOpacity(0.35),
+            color: const Color(0xFFFF5D6C).withValues(alpha: 0.35),
             offset: const Offset(0, 4),
           ),
         ],
@@ -484,7 +484,7 @@ class _FoodCell extends StatelessWidget {
         width: size * 0.35,
         height: size * 0.35,
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.9),
+          color: Colors.white.withValues(alpha: 0.9),
           shape: BoxShape.circle,
         ),
       ),
@@ -517,11 +517,11 @@ class _SnakeCell extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             blurRadius: 8,
-            color: bodyColor.withOpacity(0.28),
+            color: bodyColor.withValues(alpha: 0.28),
             offset: const Offset(0, 3),
           ),
         ],
-        border: Border.all(color: Colors.white.withOpacity(0.35), width: 1),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.35), width: 1),
       ),
       child: head
           ? Align(
@@ -622,7 +622,7 @@ class _Dpad extends StatelessWidget {
     // Ukuran D-Pad, bisa kamu sesuaikan (mis. 160–220)
     const double size = 200;
     const double btnPad = 20; // padding di dalam tombol
-    final Color base = Colors.white.withOpacity(0.92);
+    final Color base = Colors.white.withValues(alpha: 0.92);
     final Color icon = Colors.black87;
 
     Widget circleBtn(IconData ic, VoidCallback onTap) => Material(
@@ -653,13 +653,13 @@ class _Dpad extends StatelessWidget {
                 width: size * 0.72,
                 height: size * 0.72,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.35),
+                  color: Colors.white.withValues(alpha: 0.35),
                   borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: Colors.white.withOpacity(0.5)),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.5)),
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 14,
-                      color: Colors.black.withOpacity(0.06),
+                      color: Colors.black.withValues(alpha: 0.06),
                       offset: const Offset(0, 6),
                     ),
                   ],

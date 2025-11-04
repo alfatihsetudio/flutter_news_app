@@ -100,7 +100,7 @@ class _AdvancedPriceChartState extends State<AdvancedPriceChart> {
       final prev = widget.prices[i - 1];
       final isUp = y >= prev;
       if (up != null && isUp != up) {
-        bars.add(_segment(current, up!));
+        bars.add(_segment(current, up));
         current = [FlSpot((i - 1).toDouble(), prev), FlSpot(x, y)];
       } else {
         current.add(FlSpot(x, y));
@@ -108,7 +108,7 @@ class _AdvancedPriceChartState extends State<AdvancedPriceChart> {
       up = isUp;
     }
     if (current.isNotEmpty && up != null) {
-      bars.add(_segment(current, up!));
+      bars.add(_segment(current, up));
     }
     return bars;
   }

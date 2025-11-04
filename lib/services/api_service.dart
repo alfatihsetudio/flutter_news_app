@@ -34,7 +34,7 @@ class ApiService {
       final uri = Uri.parse(url);
       final response = await http.get(uri).timeout(const Duration(seconds: 15));
       print('NEWSAPI: GET ${originalUrl ?? url} -> ${response.statusCode}');
-      final bodyPreview = response.body.length > 800 ? response.body.substring(0, 800) + '...[truncated]' : response.body;
+      final bodyPreview = response.body.length > 800 ? '${response.body.substring(0, 800)}...[truncated]' : response.body;
       print('NEWSAPI BODY PREVIEW: $bodyPreview');
 
       if (response.statusCode == 200) {
