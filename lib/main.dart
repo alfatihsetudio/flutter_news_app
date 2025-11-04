@@ -1,7 +1,9 @@
-﻿import 'package:flutter/material.dart';
+﻿// lib/main.dart
+import 'package:flutter/material.dart';
 import 'screens/menu_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -14,11 +16,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Experimental Hub',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        scaffoldBackgroundColor: Colors.grey.shade100,
+        colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.grey.shade100,
       ),
+      // <- ini yang bikin pertama tampil
       home: const MenuScreen(),
+      // (opsional) kalau mau juga pakai named routes
+      routes: {
+        '/menu': (_) => const MenuScreen(),
+      },
     );
   }
 }

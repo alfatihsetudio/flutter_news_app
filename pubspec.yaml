@@ -1,8 +1,8 @@
 name: flutter_news_app
-description: "A modern Flutter app with multi-feature menu: News, Login/Register, Maps, and Crypto Watch."
+description: "A modern Flutter app with multi-feature menu: News, Login/Register, Maps, Stocks/Crypto, and Game."
 publish_to: 'none'
 
-version: 1.2.1+2
+version: 1.3.0+3
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -15,24 +15,32 @@ dependencies:
   cupertino_icons: ^1.0.8
   shimmer: ^3.0.0
   cached_network_image: ^3.3.1
-  fl_chart: ^0.65.0   # ← chart dengan grid, axis, tooltip
+
+  # Chart (grid, axis, tooltip)
+  fl_chart: ^0.65.0
 
   # ─── Networking & API ────────────────────────
-  http: ^1.5.0
+  # Gunakan dio untuk User API; http masih boleh dipakai untuk service lama
+  dio: ^5.5.0+1
+  http: ^1.2.2
+
+  # ─── State & Storage ─────────────────────────
+  provider: ^6.1.2
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.3.2
 
   # ─── Utilities ───────────────────────────────
   intl: ^0.20.2
-  shared_preferences: ^2.3.2
   flutter_tts: ^4.2.3
   share_plus: ^12.0.1
   url_launcher: ^6.3.0
 
   # ─── Maps Feature ────────────────────────────
+  # Versi saling cocok (flutter_map 8.x)
   flutter_map: ^8.2.2
+  flutter_map_marker_cluster: ^8.1.0
   latlong2: ^0.9.1
   geolocator: ^14.0.2
-  # cocok dengan flutter_map 8.x
-  flutter_map_marker_cluster: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -41,3 +49,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # assets:
+  #   - assets/
